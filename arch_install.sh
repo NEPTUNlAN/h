@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-UCODE_PKG="intel-ucode"
+UCODE_PKG="amd-ucode"
 BASE_PKGS="base linux-firmware sudo python efibootmgr iptables-nft"
 BTRFS_MOUNT_OPTS="ssd,noatime,compress=zstd:1,space_cache=v2,autodefrag"
 TIMEZONE="US/Eastern"
@@ -548,7 +548,7 @@ if [[ $secure_boot == y ]] ; then
             echo "Now chroot into new system and enroll keys manully with"
             echo "sbctl enroll-keys"
             echo "exit the chroot to continue installation"
-            arch-chroot /mnt
+            #arch-chroot /mnt
         fi
     fi
 
